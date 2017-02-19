@@ -36,7 +36,7 @@ public class Login extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
-		String content = Utils.readFile("login.html", StandardCharsets.UTF_8);
+		String content = Utils.readFile("welcome.html", StandardCharsets.UTF_8);
 		response.getWriter().append(content);
 		
 		
