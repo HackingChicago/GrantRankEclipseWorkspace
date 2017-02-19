@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  <title>GrantRank: Search for Grant</title>
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+  <link href="welcome.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <script src="https://use.fontawesome.com/6c2319bf7d.js"></script>
+</head>
+
+<body>
+  <!-- Navigation bar -->
+  <nav class="teal lighten-1" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">GrantRank</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#signupmodal">Sign Up</a></li>
+        <li><a href="#loginmodal">Login</a></li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#signupmodal">Sign Up</a></li>
+        <li><a href="#loginmodal">Login</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <!-- Modal for signing up -->
+  <div id="signupmodal" class="modal">
+    <div class="modal-content">
+      <h4 class="center">Sign Up</h4>
+      <form class="signinform">
+        <div class="input-field ">
+          <input id="user" type="text" class="validate" placeholder="Username">
+        </div>
+        <div class="input-field ">
+          <input id="password" type="text" class="validate" placeholder="Password">
+        </div>
+        <div class="input-field ">
+          <input id="organization" type="text" class="validate" placeholder="Organization Name">
+        </div>
+        <div class="input-field ">
+          <input id="email" type="text" class="validate" placeholder="Email">
+        </div>
+        <div class="input-field ">
+          <input id="phone" type="text" class="validate" placeholder="Phone">
+        </div>
+        <div class="input-field ">
+          <input id="address" type="text" class="validate" placeholder="Address">
+          <!-- TODO: Address format -->
+        </div>
+      </form>
+    </div>
+    <div class="row center">
+      <a href="#!/view2" class="center modal-action modal-close waves-effect waves-green btn-flat">Sign Up</a>
+      <!-- <a href="#!" class="center modal-action modal-close waves-effect waves-green btn-flat">Login</a> -->
+    </div>
+  </div>
+  <div id="loginmodal" class="modal">
+    <div class="modal-content">
+      <h4 class="center">Login</h4>
+      <form class="signinform">
+        <div class="input-field ">
+          <input id="user" type="text" class="validate" placeholder="Username">
+          <!-- <label for="origin" class="active">Origin</label> -->
+        </div>
+        <div class="input-field ">
+          <input id="password" type="text" class="validate" placeholder="Password">
+          <!-- <label for="destination" class"active">Destination</label> -->
+        </div>
+      </form>
+    </div>
+    <div class="row center">
+      <a href="#!/view2" class="center modal-action modal-close waves-effect waves-green btn-flat">Login</a>
+    </div>
+  </div>
+  <div id="index-banner" class="parallax-container">
+    <!-- Added to make text more visible -->
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br>
+        <br>
+        <h1 class="header col s12"> Are you an organization looking for a grant?</h1>
+        <!-- <h4 class="header col s12">A Car-Pooling App for <span class="typer" id="some-id" data-delay="87" data-delim=":" data-words="cheap long distance travel:avoiding public transport:travelling with like minded people:saving the environment" data-colors="white" data-deleteDelay="1000"></span>
+          <span class="cursor" data-cursorDisplay="-" data-owner="some-id"></span></h4> -->
+      <div class="row center">
+        <div class="col s6">
+          <div>
+            <p>
+              Tell us more about your organization!
+            </p>
+            <a href="#" id="org-button" class="btn-large waves-effect waves-light lighten-1">Set Up Organization</a>
+            <p id="setuporg"> Upload documents of proof about your organization
+              <ul id="doc-list">
+                <li>
+                  <div>Description of the Organization</div>
+                </li>
+                <li>
+                  <div>List of Board Members</div>
+                </li>
+                <li>
+                  <div>Audited Financial Statements</div>
+                </li>
+                <li>
+                  <div>IRS Verification</div>
+                </li>
+              </ul>
+            </p>
+          </div>
+        </div>
+        <div class="col s6">
+          <div>
+            <p>
+              Ready to apply for grants for your organization?
+            </p>
+            <a href="#" id="search-button" class="btn-large waves-effect waves-light lighten-1">Search for Grant</a>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet orci felis, vitae consectetur nisi accumsan nec. Integer ipsum diam, condimentum iaculis consectetur nec, consequat mollis magna. Etiam malesuada auctor tellus sed ultricies. Quisque
+            </p>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      </div>
+    </div>
+  </div>
+  <div class="parallax"><img src="images/03.jpg" alt="Unsplashed background img 1"></div>
+  </div>
+  <div class="container">
+    <div class="section">
+      <h1 class="header center teal-text text-lighten-2">How It Works?</h1>
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">shuffle</i></h2>
+            <h5 class="center">Planning on a Trip</h5>
+            <p class="light">Planning on going on a trip? Dont like public transport and want to carpool and travel for cheap? OOber OOber is the website for you. Create your profile and login as a driver or a rider to post a trip or look for existing trips. Customize your trips according to several filters we have.</p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">credit_card</i></h2>
+            <h5 class="center">We Have Got Your Back!</h5>
+            <p class="light">We do all the heavy lifting, from payments to planning. Customize your trip according to what you like. We don't like weird travel buddies, choose a driver or a rider based on common interests, friends, common taste in music and many other filters which we have to offer!</p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">Get Set Go</h5>
+            <p class="light">Plan your trip to the tiniest detail with our messaging platform. Select a driver or a rider which best suits your needs and interests, decide if you want to take detours and much more. See what works for you and we'll handle the rest. Bon Voyage!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">#CARPOOL #noPublicTransport #CHEAP #awesomeTravelBuddies</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="images/landing2-darker.jpg" alt="Unsplashed background img 2"></div>
+  </div> -->
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About GoodCity</h5>
+          <p class="grey-text text-lighten-3">Goodcity is a Human Investment Organization. For over 30 years, Goodcity has been committed to starting, growing, and "investing" in entrepreneurs who are making a difference in under-resourced urban communities. We work with both nonprofit organizations and for-profit organizations who promote self-sufficiency, hope and purpose in the communities they are a part of.</p>
+        </div>
+        <br>
+        <div class="col l3 s12">
+          <h2 class="center">
+          <a class="grey-text text-lighten-3" href="https://www.facebook.com/goodcityorg/">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          </h2>
+        </div>
+        <div class="col l3 s12">
+          <h2 class="center">
+          <a class="grey-text text-lighten-3" href="https://twitter.com/goodcitychicago?lang=en">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        Made by ❤️ &nbsp;at <a class="grey-text text-lighten-3" href="http://www.hackingchicago.com/">Hacking Chicago</a>
+      </div>
+    </div>
+  </footer>
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+  <script>
+  (function($) {
+    $(function() {
+
+      $('.parallax').parallax();
+      $('.modal').modal();
+
+    }); // end of document ready
+  })(jQuery); // end of jQuery name space
+  </script>
+</body>
+
+</html>

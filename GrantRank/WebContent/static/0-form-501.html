@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  <title>GrantRank: Search for Grant</title>
+  <!-- CSS  -->
+  <!-- MDL Stepper -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-amber.min.css">
+  <link rel="stylesheet" href="stepper.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="form.css" media="screen,projection" />
+  <script src="https://use.fontawesome.com/6c2319bf7d.js"></script>
+</head>
+
+<body>
+  <!-- Navigation bar -->
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">GrantRank</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#signupmodal">Sign Up</a></li>
+        <li><a href="#loginmodal">Login</a></li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#signupmodal">Sign Up</a></li>
+        <li><a href="#loginmodal">Login</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <!-- Modal for signing up -->
+  <div id="signupmodal" class="modal">
+    <div class="modal-content">
+      <h4 class="center">Sign Up</h4>
+      <form class="signinform">
+        <div class="input-field ">
+          <input id="user" type="text" class="validate" placeholder="Username">
+        </div>
+        <div class="input-field ">
+          <input id="password" type="text" class="validate" placeholder="Password">
+        </div>
+        <div class="input-field ">
+          <input id="organization" type="text" class="validate" placeholder="Organization Name">
+        </div>
+        <div class="input-field ">
+          <input id="email" type="text" class="validate" placeholder="Email">
+        </div>
+        <div class="input-field ">
+          <input id="phone" type="text" class="validate" placeholder="Phone">
+        </div>
+        <div class="input-field ">
+          <input id="address" type="text" class="validate" placeholder="Address">
+          <!-- TODO: Address format -->
+        </div>
+      </form>
+    </div>
+    <div class="row center">
+      <a href="#!/view2" class="center modal-action modal-close waves-effect waves-green btn-flat">Sign Up</a>
+      <!-- <a href="#!" class="center modal-action modal-close waves-effect waves-green btn-flat">Login</a> -->
+    </div>
+  </div>
+  <div id="loginmodal" class="modal">
+    <div class="modal-content">
+      <h4 class="center">Login</h4>
+      <form class="signinform">
+        <div class="input-field ">
+          <input id="user" type="text" class="validate" placeholder="Username">
+          <!-- <label for="origin" class="active">Origin</label> -->
+        </div>
+        <div class="input-field ">
+          <input id="password" type="text" class="validate" placeholder="Password">
+          <!-- <label for="destination" class"active">Destination</label> -->
+        </div>
+      </form>
+    </div>
+    <div class="row center">
+      <a href="#!/view2" class="center modal-action modal-close waves-effect waves-green btn-flat">Login</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <ul class="mdl-stepper">
+      <li class="mdl-step">
+        <!-- message -->
+        <span class="mdl-step__label">
+          <span class="mdl-step__title">
+            <span class="mdl-step__title-text">501(c)(3) Verification</span>
+        <!-- <span class="mdl-step__title-message">What type of grant are your organization looking for/</span> -->
+        </span>
+        <span class="mdl-step__label-indicator"><span class="mdl-step__label-indicator-content">1</span></span>
+        </span>
+        <!-- content -->
+        <div class="mdl-step__content">
+          <h4>Are your organization a 501(c)(3) organization?</h4>
+          <div id="form-container">
+            <form action="#">
+              <div class="row">
+                <div class="col s3">
+                  <p>
+                    <input name="501-org" type="radio" id="501-yes" />
+                    <label for="501-yes"> Yes </label>
+                  </p>
+                </div>
+                <div class="col s9">
+                  <p>
+                    <a class="waves-effect waves-light btn">Upload Document</a>
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s3">
+                  <p>
+                    <input name="501-org" type="radio" id="501-no" />
+                    <label for="501-no"> No </label>
+                  </p>
+                </div>
+                <div class="col s9">
+                  <p>
+                    <a class="waves-effect waves-light btn">GoodCity Fiscal Sponsorship</a>
+                  </p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- action -->
+        <div class="mdl-step__actions">
+          <!-- <a class="waves-effect waves-light btn">Continue</a> -->
+          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored mdl-button--raised" data-stepper-next>
+            Continue
+          </button>
+          <!-- <a class="waves-effect waves-light btn">Back</a> -->
+          <button class="mdl-button mdl-js-button mdl-js-ripple-effect" data-stepper-back>
+            Back
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About GoodCity</h5>
+          <p class="grey-text text-lighten-3">Goodcity is a Human Investment Organization. For over 30 years, Goodcity has been committed to starting, growing, and "investing" in entrepreneurs who are making a difference in under-resourced urban communities. We work with both nonprofit organizations and for-profit organizations who promote self-sufficiency, hope and purpose in the communities they are a part of.</p>
+        </div>
+        <br>
+        <div class="col l3 s12">
+          <h2 class="center">
+          <a class="grey-text text-lighten-3" href="https://www.facebook.com/goodcityorg/">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          </h2>
+        </div>
+        <div class="col l3 s12">
+          <h2 class="center">
+          <a class="grey-text text-lighten-3" href="https://twitter.com/goodcitychicago?lang=en">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        Made by ❤️ &nbsp;at <a class="grey-text text-lighten-3" href="http://www.hackingchicago.com/">Hacking Chicago</a>
+      </div>
+    </div>
+  </footer>
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+  <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+  <script defer src="stepper.js"></script>
+  <script>
+  (function($) {
+    $(function() {
+
+      // $('.parallax').parallax();
+      $('.modal').modal();
+
+    }); // end of document ready
+  })(jQuery); // end of jQuery name space
+  </script>
+</body>
+
+</html>
