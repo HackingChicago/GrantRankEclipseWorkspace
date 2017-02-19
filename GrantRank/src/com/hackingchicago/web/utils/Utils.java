@@ -15,4 +15,10 @@ public class Utils {
 			byte[] encoded = Files.readAllBytes(Paths.get(path));
 			  return new String(encoded, encoding);
 			}
+	
+	public static String TEMP_FOLDER = "/tmp";
+	
+	public static String TEMP_DATA_FOLDER = "/tmp/data";
+	
+	
 }

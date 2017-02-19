@@ -14,6 +14,8 @@ import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
+import com.hackingchicago.web.utils.Utils;
+
 
 /**
  * Servlet implementation class SearchGrantSubmit
@@ -56,8 +58,11 @@ public class SearchGrantSubmit extends HttpServlet {
 
     public void init( ){
        // Get the file location where it would be stored.
-       filePath = 
-              getServletContext().getInitParameter("file-upload"); 
+//       filePath = 
+//              getServletContext().getInitParameter("file-upload"); 
+       
+       filePath = Utils.TEMP_DATA_FOLDER;
+       
     }
     public void doPost(HttpServletRequest request, 
                 HttpServletResponse response)
@@ -81,7 +86,7 @@ public class SearchGrantSubmit extends HttpServlet {
        // maximum size that will be stored in memory
        factory.setSizeThreshold(maxMemSize);
        // Location to save data that is larger than maxMemSize.
-       factory.setRepository(new File("C:/tmp"));
+       factory.setRepository(new File(Utils.TEMP_FOLDER));
 
        // Create a new file upload handler
        ServletFileUpload upload = new ServletFileUpload(factory);
