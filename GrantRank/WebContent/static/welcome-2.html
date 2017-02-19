@@ -6,20 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
   <title>GrantRank: Search for Grant</title>
   <!-- CSS  -->
-  <!-- MDL Stepper -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-amber.min.css">
-  <link rel="stylesheet" href="/GrantRank/stepper.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-  <link rel="stylesheet" type="text/css" href="/GrantRank/form.css" media="screen,projection" />
+  <link href="/GrantRank/welcome.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <script src="https://use.fontawesome.com/6c2319bf7d.js"></script>
 </head>
 
 <body>
   <!-- Navigation bar -->
-  <nav class="white" role="navigation">
+  <nav class="teal lighten-1" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="/GrantRank/login" class="brand-logo">GrantRank</a>
+      <a id="logo-container" href="#" class="brand-logo">GrantRank</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#signupmodal">Sign Up</a></li>
         <li><a href="#loginmodal">Login</a></li>
@@ -80,66 +77,98 @@
       <a href="#!/view2" class="center modal-action modal-close waves-effect waves-green btn-flat">Login</a>
     </div>
   </div>
-
-  <div class="container">
-    <ul class="mdl-stepper">
-      <li class="mdl-step">
-        <!-- message -->
-        <span class="mdl-step__label">
-          <span class="mdl-step__title">
-            <span class="mdl-step__title-text">501(c)(3) Verification</span>
-        <!-- <span class="mdl-step__title-message">What type of grant is your organization looking for/</span> -->
-        </span>
-        <span class="mdl-step__label-indicator"><span class="mdl-step__label-indicator-content">1</span></span>
-        </span>
-        <!-- content -->
-        <div class="mdl-step__content">
-          <h4>Is your organization a 501(c)(3) organization?</h4>
-          <div id="form-container">
-            <form action="#">
-              <div class="row">
-                <div class="col s3">
-                  <p>
-                    <input name="501-org" type="radio" id="501-yes" />
-                    <label for="501-yes"> Yes </label>
-                  </p>
-                </div>
-                <div class="col s9">
-                  <p>
-                    <a class="waves-effect waves-light btn">Upload Document</a>
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col s3">
-                  <p>
-                    <input name="501-org" type="radio" id="501-no" />
-                    <label for="501-no"> No </label>
-                  </p>
-                </div>
-                <div class="col s9">
-                  <p>
-                    <a href="https://goodcitychicago.org/services/fiscal-sponsorship/" class="waves-effect waves-light btn">GoodCity Fiscal Sponsorship</a>
-                  </p>
-                </div>
-              </div>
-            </form>
+  <div id="index-banner" class="parallax-container">
+    <!-- Added to make text more visible -->
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br>
+        <br>
+        <h1 class="header col s12"> Are you an organization looking for a grant?</h1>
+        <!-- <h4 class="header col s12">A Car-Pooling App for <span class="typer" id="some-id" data-delay="87" data-delim=":" data-words="cheap long distance travel:avoiding public transport:travelling with like minded people:saving the environment" data-colors="white" data-deleteDelay="1000"></span>
+          <span class="cursor" data-cursorDisplay="-" data-owner="some-id"></span></h4> -->
+      <div class="row center">
+        <div class="col s6">
+          <div>
+            <p>
+              Tell us more about your organization!
+            </p>
+            <a href="/GrantRank/orInfo" id="org-button" class="btn-large waves-effect waves-light lighten-1">Set Up Organization</a>
+            <p id="setuporg"> Upload documents of proof about your organization
+              <ul id="doc-list">
+                <li>
+                  <div>Description of the Organization</div>
+                </li>
+                <li>
+                  <div>List of Board Members</div>
+                </li>
+                <li>
+                  <div>Audited Financial Statements</div>
+                </li>
+                <li>
+                  <div>IRS Verification</div>
+                </li>
+              </ul>
+            </p>
           </div>
         </div>
-        <!-- action -->
-        <div class="mdl-step__actions">
-          <!-- <a class="waves-effect waves-light btn">Continue</a> -->
-          <button class="f-button mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored mdl-button--raised" data-stepper-next>
-            Continue
-          </button>
-          <!-- <a class="waves-effect waves-light btn">Back</a> -->
-          <button class="b-button mdl-button mdl-js-button mdl-js-ripple-effect" data-stepper-back>
-            Back
-          </button>
+        <div class="col s6">
+          <div>
+            <p>
+              Ready to apply for grants for your organization?
+            </p>
+            <a href="/GrantRank/searchGrant" id="search-button" class="btn-large waves-effect waves-light lighten-1">Search for Grant</a>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet orci felis, vitae consectetur nisi accumsan nec. Integer ipsum diam, condimentum iaculis consectetur nec, consequat mollis magna. Etiam malesuada auctor tellus sed ultricies. Quisque
+            </p>
+          </div>
         </div>
-      </li>
-    </ul>
+      </div>
+      <br>
+      <br>
+      </div>
+    </div>
   </div>
+  <div class="parallax"><img src="http://i.imgur.com/J1k4DFr.jpg" alt="Unsplashed background img 1"></div>
+  </div>
+  <div class="container">
+    <div class="section">
+      <h1 class="header center teal-text text-lighten-2">How It Works?</h1>
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">shuffle</i></h2>
+            <h5 class="center">Planning on a Trip</h5>
+            <p class="light">Planning on going on a trip? Dont like public transport and want to carpool and travel for cheap? OOber OOber is the website for you. Create your profile and login as a driver or a rider to post a trip or look for existing trips. Customize your trips according to several filters we have.</p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">credit_card</i></h2>
+            <h5 class="center">We Have Got Your Back!</h5>
+            <p class="light">We do all the heavy lifting, from payments to planning. Customize your trip according to what you like. We don't like weird travel buddies, choose a driver or a rider based on common interests, friends, common taste in music and many other filters which we have to offer!</p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">Get Set Go</h5>
+            <p class="light">Plan your trip to the tiniest detail with our messaging platform. Select a driver or a rider which best suits your needs and interests, decide if you want to take detours and much more. See what works for you and we'll handle the rest. Bon Voyage!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">#CARPOOL #noPublicTransport #CHEAP #awesomeTravelBuddies</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="images/landing2-darker.jpg" alt="Unsplashed background img 2"></div>
+  </div> -->
   <footer class="page-footer teal">
     <div class="container">
       <div class="row">
@@ -173,15 +202,11 @@
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-  <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
-  <script defer src="/GrantRank/stepper.js"></script>
-  <script defer src="/GrantRank/form-to-type.js"></script>
-  <script defer src="/GrantRank/welcome-back.js"></script>
   <script>
   (function($) {
     $(function() {
 
-      // $('.parallax').parallax();
+      $('.parallax').parallax();
       $('.modal').modal();
 
     }); // end of document ready
