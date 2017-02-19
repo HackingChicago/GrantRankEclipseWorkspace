@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  <title>GrantRank: Search for Grant</title>
+  <!-- CSS  -->
+  <!-- MDL Stepper -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-amber.min.css">
+  <link rel="stylesheet" href="/GrantRank/stepper.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="/GrantRank/form.css" media="screen,projection" />
+  <script src="https://use.fontawesome.com/6c2319bf7d.js"></script>
+</head>
+
+<body>
+  <!-- Navigation bar -->
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">GrantRank</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#signupmodal">Sign Up</a></li>
+        <li><a href="#loginmodal">Login</a></li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#signupmodal">Sign Up</a></li>
+        <li><a href="#loginmodal">Login</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <!-- Modal for signing up -->
+  <div id="signupmodal" class="modal">
+    <div class="modal-content">
+      <h4 class="center">Sign Up</h4>
+      <form class="signinform">
+        <div class="input-field ">
+          <input id="user" type="text" class="validate" placeholder="Username">
+        </div>
+        <div class="input-field ">
+          <input id="password" type="text" class="validate" placeholder="Password">
+        </div>
+        <div class="input-field ">
+          <input id="organization" type="text" class="validate" placeholder="Organization Name">
+        </div>
+        <div class="input-field ">
+          <input id="email" type="text" class="validate" placeholder="Email">
+        </div>
+        <div class="input-field ">
+          <input id="phone" type="text" class="validate" placeholder="Phone">
+        </div>
+        <div class="input-field ">
+          <input id="address" type="text" class="validate" placeholder="Address">
+          <!-- TODO: Address format -->
+        </div>
+      </form>
+    </div>
+    <div class="row center">
+      <a href="#!/view2" class="center modal-action modal-close waves-effect waves-green btn-flat">Sign Up</a>
+      <!-- <a href="#!" class="center modal-action modal-close waves-effect waves-green btn-flat">Login</a> -->
+    </div>
+  </div>
+  <div id="loginmodal" class="modal">
+    <div class="modal-content">
+      <h4 class="center">Login</h4>
+      <form class="signinform">
+        <div class="input-field ">
+          <input id="user" type="text" class="validate" placeholder="Username">
+          <!-- <label for="origin" class="active">Origin</label> -->
+        </div>
+        <div class="input-field ">
+          <input id="password" type="text" class="validate" placeholder="Password">
+          <!-- <label for="destination" class"active">Destination</label> -->
+        </div>
+      </form>
+    </div>
+    <div class="row center">
+      <a href="#!/view2" class="center modal-action modal-close waves-effect waves-green btn-flat">Login</a>
+    </div>
+  </div>
+  <div class="container">
+    <ul class="mdl-stepper">
+      <li class="mdl-step">
+        <!-- message -->
+        <span class="mdl-step__label">
+          <span class="mdl-step__title">
+            <span class="mdl-step__title-text">Causes</span>
+        <!-- <span class="mdl-step__title-message">What type of grant are your organization looking for/</span> -->
+        </span>
+        <span class="mdl-step__label-indicator"><span class="mdl-step__label-indicator-content">3</span></span>
+        </span>
+        <!-- content -->
+        <div class="mdl-step__content">
+          <h4>What causes are the grants going to be used for?</h4>
+          <div id="form-container" class="row">
+            <form action="#">
+              <div class="col s6">
+                <p>
+                  <input type="checkbox" id="cause-edu" />
+                  <label for="cause-edu">Education</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="cause-emp" />
+                  <label for="cause-emp">Employment</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="cause-gender" />
+                  <label for="cause-gender">Gender Equality</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="cause-hunger" />
+                  <label for="cause-hunger">Hunger</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="cause-culture" />
+                  <label for="cause-culture">Culture</label>
+                </p>
+              </div>
+              <div class="col s6">
+                <p>
+                  <input type="checkbox" id="cause-tech" />
+                  <label for="cause-tech">Tech Assistance</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="cause-emg" />
+                  <label for="cause-emg">Emergency</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="cause-stp" />
+                  <label for="cause-stp">Startup</label>
+                </p>
+                <p>
+                  <input placeholder="Other" id="cause-other" type="text" class="validate">
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- action -->
+        <div class="mdl-step__actions">
+          <!-- <a class="waves-effect waves-light btn">Continue</a> -->
+          <button class="f-button mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored mdl-button--raised" data-stepper-next>
+            Continue
+          </button>
+          <!-- <a class="waves-effect waves-light btn">Back</a> -->
+          <button class="b-button mdl-button mdl-js-button mdl-js-ripple-effect" data-stepper-back>
+            Back
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About GoodCity</h5>
+          <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet orci felis, vitae consectetur nisi accumsan nec. Integer ipsum diam, condimentum iaculis consectetur nec, consequat mollis magna. Etiam malesuada auctor tellus sed ultricies.</p>
+        </div>
+        <br>
+        <div class="col l3 s12">
+          <h2 class="center brown-text"><i class="fa fa-facebook" aria-hidden="true"></i></h2>
+        </div>
+        <div class="col l3 s12">
+          <h2 class="center brown-text"><i class="fa fa-twitter" aria-hidden="true"></i></h2>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        Made by <a class="brown-text text-lighten-3" href="#">Hacking Chicago</a>
+      </div>
+    </div>
+  </footer>
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+  <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+  <script defer src="/GrantRank/stepper.js"></script>
+  <script src="/GrantRank/form-to-revenue.js"></script>
+  <script>
+  (function($) {
+    $(function() {
+
+      // $('.parallax').parallax();
+      $('.modal').modal();
+
+    }); // end of document ready
+  })(jQuery); // end of jQuery name space
+  </script>
+</body>
+
+</html>
