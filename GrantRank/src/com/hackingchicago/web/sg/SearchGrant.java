@@ -2,12 +2,15 @@ package com.hackingchicago.web.sg;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.hackingchicago.web.utils.Utils;
 
 /**
  * Servlet implementation class SearchGrant
@@ -30,7 +33,9 @@ public class SearchGrant extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 
-		PrintWriter out = response.getWriter();
+		String content = Utils.readFile("0-form-501.html", StandardCharsets.UTF_8);
+		response.getWriter().append(content);
+		/*PrintWriter out = response.getWriter();
 		out.println("<html>");
 		out.println("<body>");
 		out.println("<br><h3>Are you a 501(c)(3) organization?</h3>");
@@ -43,9 +48,7 @@ public class SearchGrant extends HttpServlet {
 		out.println("</form>");		
 		out.println("<br><br>");
 		out.println("</body>");
-		out.println("</html>");	
-		
-		
+		out.println("</html>");	*/	
 	}
 
 	/**
